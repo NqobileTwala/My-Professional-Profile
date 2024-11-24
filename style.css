@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #121212;
+  color: #fff;
+  scroll-snap-type: y mandatory;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1c1c1c;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff4a57;
+  text-decoration: underline;
+}
+.intro {
+  color: white;
+  font-weight: bold;
+}
+
+.name {
+  font-style: italic;
+}
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+#home .profile-pic {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home .profile-pic img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ff4a57;
+}
+
+#home .profile-info {
+  flex: 1;
+  padding: 20px;
+}
+
+#home .profile-info h1 {
+  font-size: 2.5rem;
+  color: #ff4a57;
+}
+
+#home .profile-info p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons img {
+  filter: brightness(0) invert(1);
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  transition: transform 0.3s, filter 0.3s; /* transition for hovering*/
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1) invert(0.5);
+}
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  scroll-snap-align: start;
+  min-height: 600px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #ff4a57;
+  margin: 60px 0;
+}
+
+#education {
+  margin-top: 100px;
+}
+
+.timeline {
+  list-style: none;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline li {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: row;
+  width: 80%;
+  justify-content: center;
+}
+
+.timeline .timeline-date {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 20px;
+  color: #ff4a57;
+}
+
+.timeline .timeline-content {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.timeline h3 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+.id {
+  font-style: italic;
+}
+
+#technologies {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.tech-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.tech-skills img {
+  border: 2px solid #c30e0e;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.tech-skills img:hover {
+  transform: scale(1.1);
+  border-color: #00aaff;
+}
+
+@media (max-width: 768px) {
+  section {
+    height: auto;
+    min-height: 100vh;
+    padding: 50px 20px;
+  }
+
+  #education,
+  #technologies {
+    margin-top: 0;
+  }
+
+  .timeline li {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .timeline .timeline-content {
+    padding-left: 0;
+  }
+
+  .timeline h3 {
+    font-size: 1.1rem;
+  }
+
+  .tech-skills {
+    gap: 15px;
+  }
+
+  .tech-skills img {
+    padding: 8px;
+    border-width: 1.5px;
+  }
+}
